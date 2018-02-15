@@ -15,3 +15,4 @@ git merge ReadMe
 git push origin master
 git add .
 git commit -m "Add"
+git push
