@@ -1,0 +1,924 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf200
+{\fonttbl\f0\froman\fcharset0 Times-Roman;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red38\green38\blue38;\red18\green139\blue2;
+\red67\green67\blue67;\red213\green213\blue213;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c20000\c20000\c20000;\cssrgb\c0\c60000\c0;
+\cssrgb\c33333\c33333\c33333;\cssrgb\c86667\c86667\c86667;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+106 \
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\fs26\fsmilli13333 \cf2 To synchronize your work, you run a git fetch origin command. This command looks up which server \'93origin\'94 is (in this case, it\'92s git.ourcompa- ny.com), fetches any data from it that you don\'92t yet have, and updates your lo- cal database, moving your origin/master pointer to its new, more up-to-date position. 
+\fs24 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth15640\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw10\brdrcf2 \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl260\sa240\partightenfactor0
+
+\fs21\fsmilli10667 \cf2 Remote Branches 
+\fs24 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth15640\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf2 \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw10\brdrcf2 \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl280\sa240\partightenfactor0
+
+\b \cf2 FIGURE 3-24 
+\b0 \
+\pard\intbl\itap1\pardeftab720\sl260\sa240\partightenfactor0
+
+\i\fs21\fsmilli10667 \cf2 git fetch updates your remote references 
+\i0\fs24 \
+\pard\intbl\itap1\pardeftab720\sl280\partightenfactor0
+\cf2 {{\NeXTGraphic page107image3817664.png \width6302 \height4626 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\intbl\itap1\pardeftab720\sl280\partightenfactor0
+\cf2  \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth15640\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf2 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl300\sa240\partightenfactor0
+
+\fs26\fsmilli13333 \cf2 To demonstrate having multiple remote servers and what remote branches for those remote projects look like, let\'92s assume you have another internal Git server that is used only for development by one of your sprint teams. This serv- er is at git.team1.ourcompany.com. You can add it as a new remote refer- ence to the project you\'92re currently working on by running the git remote add command as we covered in 
+\b \cf3 Chapter 2
+\b0 \cf2 . Name this remote teamone, which will be your shortname for that whole URL. 
+\fs24 \
+107 \cell \lastrow\row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth15640\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw10\brdrcf2 \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl260\sa240\partightenfactor0
+
+\fs21\fsmilli10667 \cf2 CHAPTER 3: Git Branching 
+\fs24 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth15640\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf2 \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw10\brdrcf2 \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl280\sa240\partightenfactor0
+
+\b \cf2 FIGURE 3-25 
+\b0 \
+\pard\intbl\itap1\pardeftab720\sl260\sa240\partightenfactor0
+
+\i\fs21\fsmilli10667 \cf2 Adding another server as a remote 
+\i0\fs24 \
+\pard\intbl\itap1\pardeftab720\sl280\partightenfactor0
+\cf2 {{\NeXTGraphic page108image1799808.png \width6295 \height4548 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\intbl\itap1\pardeftab720\sl280\partightenfactor0
+\cf2  \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth15640\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf2 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl280\sa240\partightenfactor0
+\cf2 108 \
+\pard\intbl\itap1\pardeftab720\sl300\sa240\partightenfactor0
+
+\fs26\fsmilli13333 \cf2 Now, you can run git fetch teamone to fetch everything the remote teamone server has that you don\'92t have yet. Because that server has a subset of the data your origin server has right now, Git fetches no data but sets a re- mote branch called teamone/master to point to the commit that teamone has as its master branch. 
+\fs24 \cell \lastrow\row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth15640\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw10\brdrcf2 \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl260\sa240\partightenfactor0
+
+\fs21\fsmilli10667 \cf2 Remote Branches 
+\fs24 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth15640\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf2 \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw10\brdrcf2 \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl280\sa240\partightenfactor0
+
+\b \cf2 FIGURE 3-26 
+\b0 \
+\pard\intbl\itap1\pardeftab720\sl260\sa240\partightenfactor0
+
+\i\fs21\fsmilli10667 \cf2 Remote tracking branch for teamone/ master 
+\i0\fs24 \
+\pard\intbl\itap1\pardeftab720\sl280\partightenfactor0
+\cf2 {{\NeXTGraphic page109image1797792.png \width6295 \height4548 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\intbl\itap1\pardeftab720\sl280\partightenfactor0
+\cf2  \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth15640\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf2 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl340\sa240\partightenfactor0
+
+\b\fs29\fsmilli14667 \cf2 Pushing 
+\b0\fs24 \
+\pard\intbl\itap1\pardeftab720\sl300\sa240\partightenfactor0
+
+\fs26\fsmilli13333 \cf2 When you want to share a branch with the world, you need to push it up to a remote that you have write access to. Your local branches aren\'92t automatically synchronized to the remotes you write to \'96 you have to explicitly push the branches you want to share. That way, you can use private branches for work you don\'92t want to share, and push up only the topic branches you want to col- laborate on. 
+\fs24 \
+
+\fs26\fsmilli13333 If you have a branch named serverfix that you want to work on with oth- ers, you can push it up the same way you pushed your first branch. Run git push (remote) (branch): 
+\fs24 \
+\pard\intbl\itap1\pardeftab720\sl280\partightenfactor0
+\cf2 {{\NeXTGraphic page109image1689968.png \width6060 \height2060 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\intbl\itap1\pardeftab720\sl280\partightenfactor0
+\cf2 \
+\pard\intbl\itap1\pardeftab720\sl280\sa240\partightenfactor0
+
+\b \cf4 $ 
+\b0 \cf2 git push origin serverfix\uc0\u8232 \cf5 Counting objects: 24, done.\uc0\u8232 Delta compression using up to 8 threads.\u8232 Compressing objects: 100% (15/15), done.\u8232 Writing objects: 100% (24/24), 1.91 KiB | 0 bytes/s, done. Total 24 (delta 2), reused 0 (delta 0)\u8232 To https://github.com/schacon/simplegit \cf2 \
+\pard\intbl\itap1\pardeftab720\sl280\partightenfactor0
+\cf5  * [new branch]      serverfix -> serverfix\
+\pard\intbl\itap1\pardeftab720\sl280\sa240\partightenfactor0
+\cf2 109 \cell \lastrow\row
+\pard\pardeftab720\sl260\sa240\partightenfactor0
+
+\fs21\fsmilli10667 \cf2 CHAPTER 3: Git Branching 
+\fs24 \
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\fs26\fsmilli13333 \cf2 This is a bit of a shortcut. Git automatically expands the serverfix branch- name out to refs/heads/serverfix:refs/heads/serverfix, which means, \'93Take my serverfix local branch and push it to update the remote\'92s serv- erfix branch.\'94 We\'92ll go over the refs/heads/ part in detail in 
+\b \cf3 Chapter 10
+\b0 \cf2 , but you can generally leave it o . You can also do git push origin server- fix:serverfix, which does the same thing \'96 it says, \'93Take my serverfix and make it the remote\'92s serverfix.\'94 You can use this format to push a local branch into a remote branch that is named di erently. If you didn\'92t want it to be called serverfix on the remote, you could instead run git push origin server- fix:awesomebranch to push your local serverfix branch to the awesome- branch branch on the remote project. 
+\fs24 \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\b \cf2 DON\'92T TYPE YOUR PASSWORD EVERY TIME 
+\b0 \
+\pard\pardeftab720\sl260\sa240\partightenfactor0
+
+\fs21\fsmilli10667 \cf2 If you\'92re using an HTTPS URL to push over, the Git server will ask you for your username and password for authentication. By default it will prompt you on the terminal for this information so the server can tell if you\'92re allowed to push. 
+\fs24 \
+
+\fs21\fsmilli10667 If you don\'92t want to type it every single time you push, you can set up a \'93credential cache\'94. The simplest is just to keep it in memory for a few minutes, which you can easily set up by running git config --global credential.helper cache. 
+\fs24 \
+
+\fs21\fsmilli10667 For more information on the various credential caching options avail- able, see 
+\b \cf3 \'93Credential Storage\'94
+\b0 \cf2 . 
+\fs24 \
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\fs26\fsmilli13333 \cf2 The next time one of your collaborators fetches from the server, they will get a reference to where the server\'92s version of serverfix is under the remote branch origin/serverfix: 
+\fs24 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 {{\NeXTGraphic page110image3768816.png \width3882 \height14 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab720\sl280\partightenfactor0
+\cf2  {{\NeXTGraphic page110image3768816.png \width3882 \height14 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\b \cf4 \cb6 $ 
+\b0 \cf2 git fetch origin\cb1 \uc0\u8232 \cf5 \cb6 remote: Counting objects: 7, done.\cb1 \uc0\u8232 \cb6 remote: Compressing objects: 100% (2/2), done. remote: Total 3 (delta 0), reused 3 (delta 0) Unpacking objects: 100% (3/3), done.\cb1 \uc0\u8232 \cb6 From https://github.com/schacon/simplegit \cf2 \cb1 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf5 \cb6  * [new branch]      serverfix    -> origin/serverfix\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+\cf2 \cb1 110 \
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\fs26\fsmilli13333 \cf2 It\'92s important to note that when you do a fetch that brings down new remote branches, you don\'92t automatically have local, editable copies of them. In other words, in this case, you don\'92t have a new serverfix branch \'96 you only have an origin/serverfix pointer that you can\'92t modify. 
+\fs24 \
+
+\fs26\fsmilli13333 To merge this work into your current working branch, you can run git merge origin/serverfix. If you want your own serverfix branch that you can work on, you can base it o your remote branch: 
+\fs24 \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\b \cf4 $ 
+\b0 \cf2 git checkout -b serverfix origin/serverfix\uc0\u8232 \cf5 Branch serverfix set up to track remote branch serverfix from origin. Switched to a new branch 'serverfix' \cf2 \
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\fs26\fsmilli13333 \cf2 This gives you a local branch that you can work on that starts where ori- gin/serverfix is. 
+\fs24 \
+\pard\pardeftab720\sl340\sa240\partightenfactor0
+
+\b\fs29\fsmilli14667 \cf2 Tracking Branches 
+\b0\fs24 \
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\fs26\fsmilli13333 \cf2 Checking out a local branch from a remote branch automatically creates what is called a \'93tracking branch\'94 (or sometimes an \'93upstream branch\'94). Tracking branches are local branches that have a direct relationship to a remote branch. If you\'92re on a tracking branch and type git pull, Git automatically knows which server to fetch from and branch to merge into. 
+\fs24 \
+
+\fs26\fsmilli13333 When you clone a repository, it generally automatically creates a master branch that tracks origin/master. However, you can set up other tracking branches if you wish \'96 ones that track branches on other remotes, or don\'92t track the master branch. The simple case is the example you just saw, running git checkout -b [branch] [remotename]/[branch]. This is a common enough operation that git provides the --track shorthand: 
+\fs24 \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\b \cf4 $ 
+\b0 \cf2 git checkout --track origin/serverfix\uc0\u8232 \cf5 Branch serverfix set up to track remote branch serverfix from origin. Switched to a new branch 'serverfix' \cf2 \
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\fs26\fsmilli13333 \cf2 To set up a local branch with a di erent name than the remote branch, you can easily use the first version with a di erent local branch name: 
+\fs24 \
+
+\fs26\fsmilli13333 Now, your local branch sf will automatically pull from origin/serverfix. 
+\fs24 \
+
+\fs26\fsmilli13333 If you already have a local branch and want to set it to a remote branch you just pulled down, or want to change the upstream branch you\'92re tracking, you 
+\fs24 \
+\pard\pardeftab720\sl260\sa240\partightenfactor0
+
+\fs21\fsmilli10667 \cf2 Remote Branches 
+\fs24 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 {{\NeXTGraphic page111image3780256.png \width6060 \height960 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab720\sl280\partightenfactor0
+\cf2  {{\NeXTGraphic page111image3780256.png \width6060 \height960 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\b \cf4 \cb6 $ 
+\b0 \cf2 git checkout -b sf origin/serverfix\cb1 \uc0\u8232 \cf5 \cb6 Branch sf set up to track remote branch serverfix from origin. Switched to a new branch 'sf' \cf2 \cb1 \
+111 \
+\pard\pardeftab720\sl260\sa240\partightenfactor0
+
+\fs21\fsmilli10667 \cf2 CHAPTER 3: Git Branching 
+\fs24 \
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\fs26\fsmilli13333 \cf2 can use the -u or --set-upstream-to option to git branch to explicitly set it at any time. 
+\fs24 \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\b \cf4 $ 
+\b0 \cf2 git branch -u origin/serverfix\uc0\u8232 \cf5 Branch serverfix set up to track remote branch serverfix from origin. \cf2 \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\b \cf2 UPSTREAM SHORTHAND 
+\b0 \
+\pard\pardeftab720\sl260\sa240\partightenfactor0
+
+\fs21\fsmilli10667 \cf2 When you have an tracking branch set up, you can reference it with the @\{upstream\} or @\{u\} shorthand. So if you\'92re on the master branch and it\'92s tracking origin/master, you can say something like git merge @\{u\} in- stead of git merge origin/master if you wish. 
+\fs24 \
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\fs26\fsmilli13333 \cf2 If you want to see what tracking branches you have set up, you can use the - vv option to git branch. This will list out your local branches with more infor- mation including what each branch is tracking and if your local branch is ahead, behind or both. 
+\fs24 \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\b \cf4 $ 
+\b0 \cf2 git branch -vv\uc0\u8232 \cf5 iss53 7e424c3 [origin/iss53: ahead 2] forgot the brackets master 1ae2a45 [origin/master] deploying index fix \cf2 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf5     * serverfix f8674d9 [teamone/server-fix-good: ahead 3, behind 1] this should do it\
+      testing   5ea463a trying something new\
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\fs26\fsmilli13333 \cf2 So here we can see that our iss53 branch is tracking origin/iss53 and is \'93ahead\'94 by two, meaning that we have two commits locally that are not pushed to the server. We can also see that our master branch is tracking origin/ master and is up to date. Next we can see that our serverfix branch is track- ing the server-fix-good branch on our teamone server and is ahead by three and behind by one, meaning that there is one commit on the server we haven\'92t merged in yet and three commits locally that we haven\'92t pushed. Finally we can see that our testing branch is not tracking any remote branch. 
+\fs24 \
+
+\fs26\fsmilli13333 It\'92s important to note that these numbers are only since the last time you fetched from each server. This command does not reach out to the servers, it\'92s telling you about what it has cached from these servers locally. If you want to- tally up to date ahead and behind numbers, you\'92ll need to fetch from all your remotes right before running this. You could do that like this: $ git fetch -- all; git branch -vv 
+\fs24 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 {{\NeXTGraphic page112image3778592.png \width6060 \height740 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab720\sl280\partightenfactor0
+\cf2  {{\NeXTGraphic page110image3768816.png \width3882 \height14 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬} {{\NeXTGraphic page110image3768816.png \width3882 \height14 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬} {{\NeXTGraphic page112image3778176.png \width6060 \height1400 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+\cf2 112 \
+\pard\pardeftab720\sl340\sa240\partightenfactor0
+
+\b\fs29\fsmilli14667 \cf2 Pulling 
+\b0\fs24 \
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\fs26\fsmilli13333 \cf2 While the git fetch command will fetch down all the changes on the server that you don\'92t have yet, it will not modify your working directory at all. It will simply get the data for you and let you merge it yourself. However, there is a command called git pull which is essentially a git fetch immediately fol- lowed by a git merge in most cases. If you have a tracking branch set up as demonstrated in the last section, either by explicitly setting it or by having it created for you by the clone or checkout commands, git pull will look up what server and branch your current branch is tracking, fetch from that server and then try to merge in that remote branch. 
+\fs24 \
+
+\fs26\fsmilli13333 Generally it\'92s better to simply use the fetch and merge commands explicitly as the magic of git pull can o en be confusing. 
+\fs24 \
+\pard\pardeftab720\sl340\sa240\partightenfactor0
+
+\b\fs29\fsmilli14667 \cf2 Deleting Remote Branches 
+\b0\fs24 \
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\fs26\fsmilli13333 \cf2 Suppose you\'92re done with a remote branch \'96 say you and your collaborators are finished with a feature and have merged it into your remote\'92s master branch (or whatever branch your stable codeline is in). You can delete a remote branch using the --delete option to git push. If you want to delete your serverfix branch from the server, you run the following: 
+\fs24 \
+
+\fs26\fsmilli13333 Basically all this does is remove the pointer from the server. The Git server will generally keep the data there for a while until a garbage collection runs, so if it was accidentally deleted, it\'92s o en easy to recover. 
+\fs24 \
+\pard\pardeftab720\sl360\sa240\partightenfactor0
+
+\b\fs32 \cf2 Rebasing 
+\b0\fs24 \
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\fs26\fsmilli13333 \cf2 In Git, there are two main ways to integrate changes from one branch into an- other: the merge and the rebase. In this section you\'92ll learn what rebasing is, how to do it, why it\'92s a pretty amazing tool, and in what cases you won\'92t want to use it. 
+\fs24 \
+\pard\pardeftab720\sl260\sa240\partightenfactor0
+
+\fs21\fsmilli10667 \cf2 Rebasing 
+\fs24 \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\b \cf4 \cb6 $ 
+\b0 \cf2 git push origin --delete serverfix \cf5 To https://github.com/schacon/simplegit \cf2 \cb1 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf5 \cb6  - [deleted]         serverfix\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+\cf2 \cb1 113 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth15640\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw10\brdrcf2 \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl260\sa240\partightenfactor0
+
+\fs21\fsmilli10667 \cf2 CHAPTER 3: Git Branching 
+\fs24 \
+\pard\intbl\itap1\pardeftab720\sl340\sa240\partightenfactor0
+
+\b\fs29\fsmilli14667 \cf2 The Basic Rebase 
+\b0\fs24 \
+\pard\intbl\itap1\pardeftab720\sl300\sa240\partightenfactor0
+
+\fs26\fsmilli13333 \cf2 If you go back to an earlier example from 
+\b \cf3 \'93Basic Merging\'94
+\b0 \cf2 , you can see that you diverged your work and made commits on two di erent branches. 
+\fs24 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth15640\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf2 \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw10\brdrcf2 \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl280\sa240\partightenfactor0
+
+\b \cf2 FIGURE 3-27 
+\b0 \
+\pard\intbl\itap1\pardeftab720\sl260\sa240\partightenfactor0
+
+\i\fs21\fsmilli10667 \cf2 Simple divergent history 
+\i0\fs24 \
+\pard\intbl\itap1\pardeftab720\sl280\partightenfactor0
+\cf2 {{\NeXTGraphic page114image3865824.png \width6302 \height3013 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\intbl\itap1\pardeftab720\sl280\partightenfactor0
+\cf2  \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth15640\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf2 \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw10\brdrcf2 \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl300\sa240\partightenfactor0
+
+\fs26\fsmilli13333 \cf2 The easiest way to integrate the branches, as we\'92ve already covered, is the merge command. It performs a three-way merge between the two latest branch snapshots (C3 and C4) and the most recent common ancestor of the two (C2), creating a new snapshot (and commit). 
+\fs24 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth15640\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf2 \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw10\brdrcf2 \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl280\sa240\partightenfactor0
+
+\b \cf2 FIGURE 3-28 
+\b0 \
+\pard\intbl\itap1\pardeftab720\sl260\sa240\partightenfactor0
+
+\i\fs21\fsmilli10667 \cf2 Merging to integrate diverged work history 
+\i0\fs24 \
+\pard\intbl\itap1\pardeftab720\sl280\partightenfactor0
+\cf2 {{\NeXTGraphic page114image3822592.png \width6302 \height2392 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\intbl\itap1\pardeftab720\sl280\partightenfactor0
+\cf2  \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth15640\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf2 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl280\sa240\partightenfactor0
+\cf2 114 \
+\pard\intbl\itap1\pardeftab720\sl300\sa240\partightenfactor0
+
+\fs26\fsmilli13333 \cf2 However, there is another way: you can take the patch of the change that was introduced in C4 and reapply it on top of C3. In Git, this is called 
+\i rebasing
+\i0 . With the rebase command, you can take all the changes that were committed on one branch and replay them on another one. 
+\fs24 \cell \lastrow\row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth15640\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw10\brdrcf2 \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl300\sa240\partightenfactor0
+
+\fs26\fsmilli13333 \cf2 In this example, you\'92d run the following: 
+\fs24 \
+\pard\intbl\itap1\pardeftab720\sl260\sa240\partightenfactor0
+
+\fs21\fsmilli10667 \cf2 Rebasing 
+\fs24 \
+\pard\intbl\itap1\pardeftab720\sl280\partightenfactor0
+\cf2 {{\NeXTGraphic page115image3787744.png \width6060 \height1180 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\intbl\itap1\pardeftab720\sl280\partightenfactor0
+\cf2 \
+\pard\intbl\itap1\pardeftab720\sl280\sa240\partightenfactor0
+
+\b \cf4 $ 
+\b0 \cf2 git checkout experiment\uc0\u8232 
+\b \cf4 $ 
+\b0 \cf2 git rebase master\uc0\u8232 \cf5 First, rewinding head to replay your work on top of it... Applying: added staged command \cf2 \
+\pard\intbl\itap1\pardeftab720\sl300\sa240\partightenfactor0
+
+\fs26\fsmilli13333 \cf2 It works by going to the common ancestor of the two branches (the one you\'92re on and the one you\'92re rebasing onto), getting the di introduced by each commit of the branch you\'92re on, saving those di s to temporary files, resetting the current branch to the same commit as the branch you are rebasing onto, and finally applying each change in turn. 
+\fs24 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth15640\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf2 \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw10\brdrcf2 \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl280\sa240\partightenfactor0
+
+\b \cf2 FIGURE 3-29 
+\b0 \
+\pard\intbl\itap1\pardeftab720\sl260\sa240\partightenfactor0
+
+\i\fs21\fsmilli10667 \cf2 Rebasing the change introduced in C4 onto C3 
+\i0\fs24 \
+\pard\intbl\itap1\pardeftab720\sl280\partightenfactor0
+\cf2 {{\NeXTGraphic page115image3834688.png \width6302 \height1817 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\intbl\itap1\pardeftab720\sl280\partightenfactor0
+\cf2  \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth15640\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf2 \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw10\brdrcf2 \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl300\sa240\partightenfactor0
+
+\fs26\fsmilli13333 \cf2 At this point, you can go back to the master branch and do a fast-forward merge. 
+\fs24 \
+\pard\intbl\itap1\pardeftab720\sl280\partightenfactor0
+\cf2 {{\NeXTGraphic page112image3778592.png \width6060 \height740 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\intbl\itap1\pardeftab720\sl280\partightenfactor0
+\cf2 \
+\pard\intbl\itap1\pardeftab720\sl280\sa240\partightenfactor0
+
+\b \cf4 $ 
+\b0 \cf2 git checkout master 
+\b \cf4 $ 
+\b0 \cf2 git merge experiment \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth15640\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf2 \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw10\brdrcf2 \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl280\sa240\partightenfactor0
+
+\b \cf2 FIGURE 3-30 
+\b0 \
+\pard\intbl\itap1\pardeftab720\sl260\sa240\partightenfactor0
+
+\i\fs21\fsmilli10667 \cf2 Fast-forwarding the master branch 
+\i0\fs24 \
+\pard\intbl\itap1\pardeftab720\sl280\partightenfactor0
+\cf2 {{\NeXTGraphic page115image3833344.png \width6295 \height1817 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\intbl\itap1\pardeftab720\sl280\partightenfactor0
+\cf2  \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth15640\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf2 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl280\sa240\partightenfactor0
+\cf2 115 \cell \lastrow\row
+\pard\pardeftab720\sl260\sa240\partightenfactor0
+
+\fs21\fsmilli10667 \cf2 CHAPTER 3: Git Branching 
+\fs24 \
+116 \
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\fs26\fsmilli13333 \cf2 Now, the snapshot pointed to by C4' is exactly the same as the one that was pointed to by C5 in the merge example. There is no di erence in the end prod- uct of the integration, but rebasing makes for a cleaner history. If you examine the log of a rebased branch, it looks like a linear history: it appears that all the work happened in series, even when it originally happened in parallel. 
+\fs24 \
+
+\fs26\fsmilli13333 O en, you\'92ll do this to make sure your commits apply cleanly on a remote branch \'96 perhaps in a project to which you\'92re trying to contribute but that you don\'92t maintain. In this case, you\'92d do your work in a branch and then rebase your work onto origin/master when you were ready to submit your patches to the main project. That way, the maintainer doesn\'92t have to do any integra- tion work \'96 just a fast-forward or a clean apply. 
+\fs24 \
+
+\fs26\fsmilli13333 Note that the snapshot pointed to by the final commit you end up with, whether it\'92s the last of the rebased commits for a rebase or the final merge commit a er a merge, is the same snapshot \'96 it\'92s only the history that is di er- ent. Rebasing replays changes from one line of work onto another in the order they were introduced, whereas merging takes the endpoints and merges them together. 
+\fs24 \
+\pard\pardeftab720\sl340\sa240\partightenfactor0
+
+\b\fs29\fsmilli14667 \cf2 More Interesting Rebases 
+\b0\fs24 \
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\fs26\fsmilli13333 \cf2 You can also have your rebase replay on something other than the rebase target branch. Take a history like 
+\b \cf3 Figure 3-31
+\b0 \cf2 , for example. You branched a topic branch (server) to add some server-side functionality to your project, and made a commit. Then, you branched o that to make the client-side changes (client) and committed a few times. Finally, you went back to your server branch and did a few more commits. 
+\fs24 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth15640\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw10\brdrcf2 \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl260\sa240\partightenfactor0
+
+\fs21\fsmilli10667 \cf2 Rebasing 
+\fs24 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth15640\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf2 \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw10\brdrcf2 \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl280\sa240\partightenfactor0
+
+\b \cf2 FIGURE 3-31 
+\b0 \
+\pard\intbl\itap1\pardeftab720\sl260\sa240\partightenfactor0
+
+\i\fs21\fsmilli10667 \cf2 A history with a topic branch o another topic branch 
+\i0\fs24 \
+\pard\intbl\itap1\pardeftab720\sl280\partightenfactor0
+\cf2 {{\NeXTGraphic page117image1770240.png \width6295 \height3674 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\intbl\itap1\pardeftab720\sl280\partightenfactor0
+\cf2  \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth15640\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf2 \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw10\brdrcf2 \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl300\sa240\partightenfactor0
+
+\fs26\fsmilli13333 \cf2 Suppose you decide that you want to merge your client-side changes into your mainline for a release, but you want to hold o on the server-side changes until it\'92s tested further. You can take the changes on client that aren\'92t on server (C8 and C9) and replay them on your master branch by using the --onto option of git rebase: 
+\fs24 \
+\pard\intbl\itap1\pardeftab720\sl280\sa240\partightenfactor0
+
+\b \cf4 \cb6 $ 
+\b0 \cf2 git rebase --onto master server client \cb1 \
+\pard\intbl\itap1\pardeftab720\sl300\sa240\partightenfactor0
+
+\fs26\fsmilli13333 \cf2 This basically says, \'93Check out the client branch, figure out the patches from the common ancestor of the client and server branches, and then replay them onto master.\'94 It\'92s a bit complex, but the result is pretty cool. 
+\fs24 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth15640\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf2 \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw10\brdrcf2 \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl280\sa240\partightenfactor0
+
+\b \cf2 FIGURE 3-32 
+\b0 \
+\pard\intbl\itap1\pardeftab720\sl260\sa240\partightenfactor0
+
+\i\fs21\fsmilli10667 \cf2 Rebasing a topic branch o another topic branch 
+\i0\fs24 \
+\pard\intbl\itap1\pardeftab720\sl280\partightenfactor0
+\cf2 {{\NeXTGraphic page117image1793312.png \width6302 \height2510 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\intbl\itap1\pardeftab720\sl280\partightenfactor0
+\cf2  \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth15640\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf2 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl280\sa240\partightenfactor0
+\cf2 117 \cell \lastrow\row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth15640\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw10\brdrcf2 \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl260\sa240\partightenfactor0
+
+\fs21\fsmilli10667 \cf2 CHAPTER 3: Git Branching 
+\fs24 \
+\pard\intbl\itap1\pardeftab720\sl300\sa240\partightenfactor0
+
+\fs26\fsmilli13333 \cf2 Now you can fast-forward your master branch (see 
+\b \cf3 Figure 3-33
+\b0 \cf2 ): 
+\fs24 \
+\pard\intbl\itap1\pardeftab720\sl280\partightenfactor0
+\cf2 {{\NeXTGraphic page112image3778592.png \width6060 \height740 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\intbl\itap1\pardeftab720\sl280\partightenfactor0
+\cf2 \
+\pard\intbl\itap1\pardeftab720\sl280\sa240\partightenfactor0
+
+\b \cf4 $ 
+\b0 \cf2 git checkout master 
+\b \cf4 $ 
+\b0 \cf2 git merge client \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth15640\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf2 \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw10\brdrcf2 \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl280\sa240\partightenfactor0
+
+\b \cf2 FIGURE 3-33 
+\b0 \
+\pard\intbl\itap1\pardeftab720\sl260\sa240\partightenfactor0
+
+\i\fs21\fsmilli10667 \cf2 Fast-forwarding your master branch to include the client branch changes 
+\i0\fs24 \
+\pard\intbl\itap1\pardeftab720\sl280\partightenfactor0
+\cf2 {{\NeXTGraphic page118image3889792.png \width6295 \height2030 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\intbl\itap1\pardeftab720\sl280\partightenfactor0
+\cf2  \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth15640\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf2 \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw10\brdrcf2 \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl300\sa240\partightenfactor0
+
+\fs26\fsmilli13333 \cf2 Let\'92s say you decide to pull in your server branch as well. You can rebase the server branch onto the master branch without having to check it out first by running git rebase [basebranch] [topicbranch] \'96 which checks out the topic branch (in this case, server) for you and replays it onto the base branch (master): 
+\fs24 \
+\pard\intbl\itap1\pardeftab720\sl280\sa240\partightenfactor0
+
+\b \cf4 \cb6 $ 
+\b0 \cf2 git rebase master server \cb1 \
+\pard\intbl\itap1\pardeftab720\sl300\sa240\partightenfactor0
+
+\fs26\fsmilli13333 \cf2 This replays your server work on top of your master work, as shown in 
+\b \cf3 Figure 3-34
+\b0 \cf2 . 
+\fs24 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth15640\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf2 \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw10\brdrcf2 \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl280\sa240\partightenfactor0
+
+\b \cf2 FIGURE 3-34 
+\b0 \
+\pard\intbl\itap1\pardeftab720\sl260\sa240\partightenfactor0
+
+\i\fs21\fsmilli10667 \cf2 Rebasing your server branch on top of your master branch 
+\i0\fs24 \
+\pard\intbl\itap1\pardeftab720\sl280\partightenfactor0
+\cf2 {{\NeXTGraphic page118image3827968.png \width6302 \height1030 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\intbl\itap1\pardeftab720\sl280\partightenfactor0
+\cf2  \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth15640\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf2 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl280\partightenfactor0
+\cf2 {{\NeXTGraphic page112image3778592.png \width6060 \height740 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\intbl\itap1\pardeftab720\sl280\partightenfactor0
+\cf2 \
+\pard\intbl\itap1\pardeftab720\sl280\sa240\partightenfactor0
+\cf2 118 \
+\pard\intbl\itap1\pardeftab720\sl300\sa240\partightenfactor0
+
+\fs26\fsmilli13333 \cf2 Then, you can fast-forward the base branch (master): 
+\fs24 \
+\pard\intbl\itap1\pardeftab720\sl280\sa240\partightenfactor0
+
+\b \cf4 $ 
+\b0 \cf2 git checkout master 
+\b \cf4 $ 
+\b0 \cf2 git merge server \cell \lastrow\row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth15640\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw10\brdrcf2 \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl300\sa240\partightenfactor0
+
+\fs26\fsmilli13333 \cf2 You can remove the client and server branches because all the work is integrated and you don\'92t need them anymore, leaving your history for this en- tire process looking like 
+\b \cf3 Figure 3-35
+\b0 \cf2 : 
+\fs24 \
+\pard\intbl\itap1\pardeftab720\sl260\sa240\partightenfactor0
+
+\fs21\fsmilli10667 \cf2 Rebasing 
+\fs24 \
+\pard\intbl\itap1\pardeftab720\sl280\partightenfactor0
+\cf2 {{\NeXTGraphic page112image3778592.png \width6060 \height740 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\intbl\itap1\pardeftab720\sl280\partightenfactor0
+\cf2 \
+\pard\intbl\itap1\pardeftab720\sl280\sa240\partightenfactor0
+
+\b \cf4 $ 
+\b0 \cf2 git branch -d client 
+\b \cf4 $ 
+\b0 \cf2 git branch -d server \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth15640\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf2 \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw10\brdrcf2 \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl280\sa240\partightenfactor0
+
+\b \cf2 FIGURE 3-35 
+\b0 \
+\pard\intbl\itap1\pardeftab720\sl260\sa240\partightenfactor0
+
+\i\fs21\fsmilli10667 \cf2 Final commit history 
+\i0\fs24 \
+\pard\intbl\itap1\pardeftab720\sl280\partightenfactor0
+\cf2 {{\NeXTGraphic page119image1800928.png \width6260 \height657 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\intbl\itap1\pardeftab720\sl280\partightenfactor0
+\cf2  \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth15640\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf2 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl340\sa240\partightenfactor0
+
+\b\fs29\fsmilli14667 \cf2 The Perils of Rebasing 
+\b0\fs24 \
+\pard\intbl\itap1\pardeftab720\sl300\sa240\partightenfactor0
+
+\fs26\fsmilli13333 \cf2 Ahh, but the bliss of rebasing isn\'92t without its drawbacks, which can be sum- med up in a single line: 
+\fs24 \
+\pard\intbl\itap1\pardeftab720\sl300\sa240\partightenfactor0
+
+\b\fs26\fsmilli13333 \cf2 Do not rebase commits that exist outside your repository. 
+\b0\fs24 \
+\pard\intbl\itap1\pardeftab720\sl300\sa240\partightenfactor0
+
+\fs26\fsmilli13333 \cf2 If you follow that guideline, you\'92ll be fine. If you don\'92t, people will hate you, and you\'92ll be scorned by friends and family. 
+\fs24 \
+
+\fs26\fsmilli13333 When you rebase stu , you\'92re abandoning existing commits and creating new ones that are similar but di erent. If you push commits somewhere and others pull them down and base work on them, and then you rewrite those commits with git rebase and push them up again, your collaborators will have to re-merge their work and things will get messy when you try to pull their work back into yours. 
+\fs24 \
+
+\fs26\fsmilli13333 Let\'92s look at an example of how rebasing work that you\'92ve made public can cause problems. Suppose you clone from a central server and then do some work o that. Your commit history looks like this: 
+\fs24 \
+119 \cell \lastrow\row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth15640\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw10\brdrcf2 \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl260\sa240\partightenfactor0
+
+\fs21\fsmilli10667 \cf2 CHAPTER 3: Git Branching 
+\fs24 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth15640\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf2 \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw10\brdrcf2 \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl280\sa240\partightenfactor0
+
+\b \cf2 FIGURE 3-36 
+\b0 \
+\pard\intbl\itap1\pardeftab720\sl260\sa240\partightenfactor0
+
+\i\fs21\fsmilli10667 \cf2 Clone a repository, and base some work on it 
+\i0\fs24 \
+\pard\intbl\itap1\pardeftab720\sl280\partightenfactor0
+\cf2 {{\NeXTGraphic page120image1807200.png \width6302 \height3721 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\intbl\itap1\pardeftab720\sl280\partightenfactor0
+\cf2  \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth15640\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf2 \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw10\brdrcf2 \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl300\sa240\partightenfactor0
+
+\fs26\fsmilli13333 \cf2 Now, someone else does more work that includes a merge, and pushes that work to the central server. You fetch them and merge the new remote branch into your work, making your history look something like this: 
+\fs24 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth15640\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf2 \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw10\brdrcf2 \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl280\sa240\partightenfactor0
+
+\b \cf2 FIGURE 3-37 
+\b0 \
+\pard\intbl\itap1\pardeftab720\sl260\sa240\partightenfactor0
+
+\i\fs21\fsmilli10667 \cf2 Fetch more commits, and merge them into your work 
+\i0\fs24 \
+\pard\intbl\itap1\pardeftab720\sl280\partightenfactor0
+\cf2 {{\NeXTGraphic page120image1786816.png \width6302 \height3989 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\intbl\itap1\pardeftab720\sl280\partightenfactor0
+\cf2  \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth15640\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf2 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl280\sa240\partightenfactor0
+\cf2 120 \cell \lastrow\row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth15640\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw10\brdrcf2 \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl300\sa240\partightenfactor0
+
+\fs26\fsmilli13333 \cf2 Next, the person who pushed the merged work decides to go back and re- base their work instead; they do a git push --force to overwrite the history on the server. You then fetch from that server, bringing down the new commits. 
+\fs24 \
+\pard\intbl\itap1\pardeftab720\sl260\sa240\partightenfactor0
+
+\fs21\fsmilli10667 \cf2 Rebasing 
+\fs24 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth15640\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf2 \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw10\brdrcf2 \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl280\sa240\partightenfactor0
+
+\b \cf2 FIGURE 3-38 
+\b0 \
+\pard\intbl\itap1\pardeftab720\sl260\sa240\partightenfactor0
+
+\i\fs21\fsmilli10667 \cf2 Someone pushes rebased commits, abandoning commits you\'92ve based your work on 
+\i0\fs24 \
+\pard\intbl\itap1\pardeftab720\sl280\partightenfactor0
+\cf2 {{\NeXTGraphic page121image1778080.png \width6302 \height3989 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\intbl\itap1\pardeftab720\sl280\partightenfactor0
+\cf2  \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth15640\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf2 \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw10\brdrcf2 \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl300\sa240\partightenfactor0
+
+\fs26\fsmilli13333 \cf2 Now you\'92re both in a pickle. If you do a git pull, you\'92ll create a merge commit which includes both lines of history, and your repository will look like this: 
+\fs24 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth15640\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf2 \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw10\brdrcf2 \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl280\sa240\partightenfactor0
+
+\b \cf2 FIGURE 3-39 
+\b0 \
+\pard\intbl\itap1\pardeftab720\sl260\sa240\partightenfactor0
+
+\i\fs21\fsmilli10667 \cf2 You merge in the same work again into a new merge commit 
+\i0\fs24 \
+\pard\intbl\itap1\pardeftab720\sl280\partightenfactor0
+\cf2 {{\NeXTGraphic page121image1788160.png \width6295 \height3320 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\intbl\itap1\pardeftab720\sl280\partightenfactor0
+\cf2  \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth15640\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf2 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl280\sa240\partightenfactor0
+\cf2 121 \cell \lastrow\row
+\pard\pardeftab720\sl260\sa240\partightenfactor0
+
+\fs21\fsmilli10667 \cf2 CHAPTER 3: Git Branching 
+\fs24 \
+122 \
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\fs26\fsmilli13333 \cf2 If you run a git log when your history looks like this, you\'92ll see two com- mits that have the same author, date, and message, which will be confusing. Furthermore, if you push this history back up to the server, you\'92ll reintroduce all those rebased commits to the central server, which can further confuse people. It\'92s pretty safe to assume that the other developer doesn\'92t want C4 and C6 to be in the history; that\'92s why she rebased in the first place. 
+\fs24 \
+\pard\pardeftab720\sl340\sa240\partightenfactor0
+
+\b\fs29\fsmilli14667 \cf2 Rebase When You Rebase 
+\b0\fs24 \
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\fs26\fsmilli13333 \cf2 If you 
+\b do 
+\b0 find yourself in a situation like this, Git has some further magic that might help you out. If someone on your team force pushes changes that over- write work that you\'92ve based work on, your challenge is to figure out what is yours and what they\'92ve rewritten. 
+\fs24 \
+
+\fs26\fsmilli13333 It turns out that in addition to the commit SHA checksum, Git also calculate a checksum that is based just on the patch introduced with the commit. This is called a \'93patch-id\'94. 
+\fs24 \
+
+\fs26\fsmilli13333 If you pull down work that was rewritten and rebase it on top of the new commits from your partner, Git can o en successfully figure out what is unique- ly yours and apply them back on top of the new branch. 
+\fs24 \
+
+\fs26\fsmilli13333 For instance, in the previous scenario, if instead of doing a merge when we\'92re at 
+\b \cf3 Figure 3-38 
+\b0 \cf2 we run git rebase teamone/master, Git will: 
+\fs24 \
+
+\fs26\fsmilli13333 \'95 Determine what work is unique to our branch (C2, C3, C4, C6, C7) 
+\fs24 \
+
+\fs26\fsmilli13333 \'95 Determine which are not merge commits (C2, C3, C4) 
+\fs24 \
+
+\fs26\fsmilli13333 \'95 Determine which have not been rewritten into the target branch (just C2 and C3, since C4 is the same patch as C4') 
+\fs24 \
+
+\fs26\fsmilli13333 \'95 Apply those commits to the top of teamone/master 
+\fs24 \
+
+\fs26\fsmilli13333 So instead of the result we see in 
+\b \cf3 Figure 3-39
+\b0 \cf2 , we would end up with some- thing more like 
+\b \cf3 Figure 3-40
+\b0 \cf2 . 
+\fs24 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth15640\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw10\brdrcf2 \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl260\sa240\partightenfactor0
+
+\fs21\fsmilli10667 \cf2 Rebasing 
+\fs24 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth15640\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf2 \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw10\brdrcf2 \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl280\sa240\partightenfactor0
+
+\b \cf2 FIGURE 3-40 
+\b0 \
+\pard\intbl\itap1\pardeftab720\sl260\sa240\partightenfactor0
+
+\i\fs21\fsmilli10667 \cf2 Rebase on top of force-pushed rebase work. 
+\i0\fs24 \
+\pard\intbl\itap1\pardeftab720\sl280\partightenfactor0
+\cf2 {{\NeXTGraphic page123image3857760.png \width6295 \height3320 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\intbl\itap1\pardeftab720\sl280\partightenfactor0
+\cf2  \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth15640\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf2 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl300\sa240\partightenfactor0
+
+\fs26\fsmilli13333 \cf2 This only works if C4 and C4\'92 that your partner made are almost exactly the same patch. Otherwise the rebase won\'92t be able to tell that it\'92s a duplicate and will add another C4-like patch (which will probably fail to apply cleanly, since the changes would already be at least somewhat there). 
+\fs24 \
+
+\fs26\fsmilli13333 You can also simplify this by running a git pull --rebase instead of a normal git pull. Or you could do it manually with a git fetch followed by a git rebase teamone/master in this case. 
+\fs24 \
+
+\fs26\fsmilli13333 If you are using git pull and want to make --rebase the default, you can set the pull.rebase config value with something like git config --global pull.rebase true. 
+\fs24 \
+
+\fs26\fsmilli13333 If you treat rebasing as a way to clean up and work with commits before you push them, and if you only rebase commits that have never been available pub- licly, then you\'92ll be fine. If you rebase commits that have already been pushed publicly, and people may have based work on those commits, then you may be in for some frustrating trouble, and the scorn of your teammates. 
+\fs24 \
+
+\fs26\fsmilli13333 If you or a partner does find it necessary at some point, make sure everyone knows to run git pull --rebase to try to make the pain a er it happens a little bit simpler. 
+\fs24 \
+\pard\intbl\itap1\pardeftab720\sl340\sa240\partightenfactor0
+
+\b\fs29\fsmilli14667 \cf2 Rebase vs. Merge 
+\b0\fs24 \
+\pard\intbl\itap1\pardeftab720\sl300\sa240\partightenfactor0
+
+\fs26\fsmilli13333 \cf2 Now that you\'92ve seen rebasing and merging in action, you may be wondering which one is better. Before we can answer this, let\'92s step back a bit and talk about what history means. 
+\fs24 \
+123 \cell \lastrow\row
+\pard\pardeftab720\sl260\sa240\partightenfactor0
+
+\fs21\fsmilli10667 \cf2 CHAPTER 3: Git Branching 
+\fs24 \
+124 \
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\fs26\fsmilli13333 \cf2 One point of view on this is that your repository\'92s commit history is a 
+\b record of what actually happened. 
+\b0 It\'92s a historical document, valuable in its own right, and shouldn\'92t be tampered with. From this angle, changing the commit history is almost blasphemous; you\'92re 
+\i lying 
+\i0 about what actually transpired. So what if there was a messy series of merge commits? That\'92s how it happened, and the repository should preserve that for posterity. 
+\fs24 \
+
+\fs26\fsmilli13333 The opposing point of view is that the commit history is the 
+\b story of how your project was made. 
+\b0 You wouldn\'92t publish the first dra of a book, and the manual for how to maintain your so ware deserves careful editing. This is the camp that uses tools like rebase and filter-branch to tell the story in the way that\'92s best for future readers. 
+\fs24 \
+
+\fs26\fsmilli13333 Now, to the question of whether merging or rebasing is better: hopefully you\'92ll see that it\'92s not that simple. Git is a powerful tool, and allows you to do many things to and with your history, but every team and every project is di er- ent. Now that you know how both of these things work, it\'92s up to you to decide which one is best for your particular situation. 
+\fs24 \
+
+\fs26\fsmilli13333 In general the way to get the best of both worlds is to rebase local changes you\'92ve made but haven\'92t shared yet before you push them in order to clean up your story, but never rebase anything you\'92ve pushed somewhere. 
+\fs24 \
+\pard\pardeftab720\sl360\sa240\partightenfactor0
+
+\b\fs32 \cf2 Summary 
+\b0\fs24 \
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\fs26\fsmilli13333 \cf2 We\'92ve covered basic branching and merging in Git. You should feel comfortable creating and switching to new branches, switching between branches and merging local branches together. You should also be able to share your branch- es by pushing them to a shared server, working with others on shared branches and rebasing your branches before they are shared. Next, we\'92ll cover what you\'92ll need to run your own Git repository-hosting server. 
+\fs24 \
+}
