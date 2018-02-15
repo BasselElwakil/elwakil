@@ -1,0 +1,17 @@
+git init
+git clone https://github.com/BasselElwakil/elwakil.git
+git add .
+git rm Second_file
+git checkout -- Second_file
+git commit -m "Add files"
+git push
+git checkout -b ReadMe
+git add .
+git commit -m "Add readme"
+git push --set-upstream origin ReadMe
+git checkout master
+git pull origin master
+git merge ReadMe
+git push origin master
+git add .
+git commit -m "Add"
